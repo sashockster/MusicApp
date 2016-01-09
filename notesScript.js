@@ -60,7 +60,10 @@ function isKeyboard(keyCode){
 //if not pushed, create a new Note using newNote function
 	if(keyboard[keyCode] !== undefined){
 		if(isPressed(keyboard[keyCode].note) ==-1){
-			document.getElementById("key").innerHTML= keyboard[keyCode].note+" is Released"
+			var name=keyboard[keyCode].note;
+			document.getElementById("key").innerHTML=
+			name+" is Released"
+			$("#"+name).addClass('selected');
 
 			createNote(keyboard[keyCode].freq,keyboard[keyCode].note)
 		}
@@ -69,9 +72,12 @@ function isKeyboard(keyCode){
 
 function stopNote(keyCode){
 	if(keyboard[keyCode] !== undefined){
+		var name=keyboard[keyCode].note;
 		keysPressed[isPressed(keyboard[keyCode].note)].stop();
 		keysPressed.splice(isPressed(keyboard[keyCode].note), 1);
-}
+		$("#"+name).removeClass('selected');
+
+	}
 
 }
 
@@ -89,22 +95,22 @@ stopNote(e.keyCode)
 
 
 
-	function createNote(frequency, noteName){
-			var aNote=new Note(frequency,noteName)
-			aNote.play();
-			keysPressed.push(aNote)
+function createNote(frequency, noteName){
+		var aNote=new Note(frequency,noteName)
+		aNote.play();
+		keysPressed.push(aNote)
 
-	}
+}
 
 
 
 //check to see if function is pressed
 function isPressed(noteName){
-for(var i=0; i<keysPressed.length;i++){
-	if(noteName==keysPressed[i].name){
-		return i;
+	for(var i=0; i<keysPressed.length;i++){
+		if(noteName==keysPressed[i].name){
+			return i;
+		}
 	}
-}
 	return -1;
 }
 

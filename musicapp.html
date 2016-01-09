@@ -2,10 +2,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="note-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-<h1> My first stage of the virtual piano!</h1>
-<p> So far the only keys that are working are C4, D4, and E4.</p>
+  <h1> My first stage of the virtual piano!</h1>
+  <p> So far the only keys that are working are C-B not
+     flats/sharps yet.</p>
+
+
+  <div class="container_row">
+<div id="w" class="outer key"><p>W</p></div>
+<div id="e" class="pushed key"><p>E</p></div>
+<div id="t" class="outer key"><p>T</p></div>
+<div id="y" class="key"><p>Y</p></div>
+<div id="u" class="key"><p>U</p></div>
+</div>
+<div class="container_row">
+<div id="c_note" class="key"><p>A</p></div>
+<div id="d_note" class="key"><p>S</p></div>
+<div id="e_note" class="key"><p>D</p></div>
+<div id="f_note" class="key"><p>F</p></div>
+<div id="g_note" class="key"><p>G</p></div>
+<div id="a_note" class="key"><p>H</p></div>
+<div id="b_note" class="key"><p>J</p></div>
+</div>
+
 <h2 id="key">Nothing is pressed</h1>
 
 <script src="notesScript.js">

@@ -1,0 +1,43 @@
+body{
+  background-color:black;
+  color:white;
+}
+
+.key{
+  background: #4AAD96;
+border-radius: 10px;
+  width: 40px;
+  height:40px;
+  float: left;
+  text-align: center;
+  left: 0;
+  top: 0;
+  margin: 0px 3px;
+  box-shadow: 10px 10px 5px #1F1E1F;
+
+}
+.key p{
+ vertical-align: middle;
+ color:black;
+
+}
+.selected{
+  background: #fff;
+
+}
+.outer{
+  margin-left: 40px;
+}
+.hello{
+  position: relative;
+}
+.pushed{
+
+ }
+
+.container_row {
+    margin: 0;
+    height: 50px;
+
+    position: relative;
+}
